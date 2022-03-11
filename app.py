@@ -3,6 +3,7 @@ from flasgger import Swagger
 from api.route.home import home_api
 from api.route.video import video_api
 from flask_cors import CORS, cross_origin
+import logging
 
 def create_app():
     app = Flask(__name__)
@@ -20,6 +21,7 @@ def create_app():
 
     return app
 
+"""
 if __name__ == '__main__':
     from argparse import ArgumentParser
 
@@ -27,9 +29,12 @@ if __name__ == '__main__':
     parser.add_argument('-p', '--port', default=5000, type=int, help='port to listen on')
     args = parser.parse_args()
     port = args.port
+"""
+app = create_app()
+gunicorn_logger = logging.getLogger('gunicorn.error')
+app.logger.handlers = gunicorn_logger.handlers
 
-    app = create_app()
-    app.run(host='0.0.0.0', port=port)
+#    app.run(host='0.0.0.0', port=port)
 
 
 #https://livecodestream.dev/post/python-flask-api-starter-kit-and-project-layout/

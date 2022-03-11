@@ -75,7 +75,7 @@ def createTemplateVideo():
         componentHeight,
         componentWidth
     )
-
+    
     return send_from_directory(publicdir, path=final_video_filename, as_attachment=True)
 
     

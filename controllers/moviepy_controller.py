@@ -31,10 +31,13 @@ class MoviepyController:
         #return send_from_directory(publicdir, path=file_name, as_attachment=True)
 
     def positionVideoInsideImage(self, videoPath, imagePath, positionX, positionY, componentHeight, componentWidth):
+        """
+            FUCK OFF
+        """
         video = (VideoFileClip(videoPath, audio=False,)
                     .set_position((positionX, positionY)))
 
-        #width = crop(originalClip, width=h, height=h, x_center=w/2, y_center=h/2) - WIDTH = H 
+        #width = crop(originalClip, width=h, height=h, x_center=w/2, y_center=h/2) - WIDTH = 
         #set position can always CENTER a video
         (w, h) = video.size
         print("component size: ", componentHeight, componentWidth)
@@ -45,7 +48,6 @@ class MoviepyController:
         if(video.h > componentHeight and video.w > componentWidth ):
             video = crop(video, height=video.h, width=video.w, x_center=w/2, y_center=h/2)
             print("cropped video size: ", video.w, video.h)
-    
         image = ImageClip(imagePath, transparent=True).set_duration(video.duration)
         print("image size: ", image.w, image.h)
         size = (image.w, image.h)
@@ -56,7 +58,8 @@ class MoviepyController:
         final_path = publicdir + file_name
         final.write_videofile(final_path, fps=24) 
 
-        return file_name
+        return file_name	
+
 
     def test():
         return 1

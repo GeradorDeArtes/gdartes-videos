@@ -12,6 +12,8 @@ python-dotenv = "*"
 moviepy = "*"
 werkzeug = "*"
 flask-cors = "*"
+gunicorn = "*"
+wheel = "*"
 
 [dev-packages]
 

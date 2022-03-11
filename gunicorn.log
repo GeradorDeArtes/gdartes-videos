@@ -1,0 +1,2485 @@
+[2021-12-15 20:34:00 +0000] [3498185] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 10000
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f3fe4e6c550>
+  on_reload: <function OnReload.on_reload at 0x7f3fe4e6c670>
+  when_ready: <function WhenReady.when_ready at 0x7f3fe4e6c790>
+  pre_fork: <function Prefork.pre_fork at 0x7f3fe4e6c8b0>
+  post_fork: <function Postfork.post_fork at 0x7f3fe4e6c9d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f3fe4e6caf0>
+  worker_int: <function WorkerInt.worker_int at 0x7f3fe4e6cc10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f3fe4e6cd30>
+  pre_exec: <function PreExec.pre_exec at 0x7f3fe4e6ce50>
+  pre_request: <function PreRequest.pre_request at 0x7f3fe4e6cf70>
+  post_request: <function PostRequest.post_request at 0x7f3fe4e80040>
+  child_exit: <function ChildExit.child_exit at 0x7f3fe4e80160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f3fe4e80280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f3fe4e803a0>
+  on_exit: <function OnExit.on_exit at 0x7f3fe4e804c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-12-15 20:34:00 +0000] [3498185] [INFO] Starting gunicorn 20.1.0
+[2021-12-15 20:34:00 +0000] [3498185] [DEBUG] Arbiter booted
+[2021-12-15 20:34:00 +0000] [3498185] [INFO] Listening at: unix:gdartes-videos.sock (3498185)
+[2021-12-15 20:34:00 +0000] [3498185] [INFO] Using worker: sync
+[2021-12-15 20:34:00 +0000] [3498198] [INFO] Booting worker with pid: 3498198
+[2021-12-15 20:34:00 +0000] [3498199] [INFO] Booting worker with pid: 3498199
+[2021-12-15 20:34:00 +0000] [3498200] [INFO] Booting worker with pid: 3498200
+[2021-12-15 20:34:00 +0000] [3498201] [INFO] Booting worker with pid: 3498201
+[2021-12-15 20:34:00 +0000] [3498185] [DEBUG] 4 workers
+[2021-12-15 20:35:29 +0000] [3498198] [DEBUG] GET /video/test
+[2021-12-15 20:35:30 +0000] [3498201] [DEBUG] GET /favicon.ico
+[2021-12-15 20:35:37 +0000] [3498198] [DEBUG] GET /video/test
+[2021-12-15 20:35:39 +0000] [3498199] [DEBUG] GET /video/test
+[2021-12-17 00:08:57 +0000] [3498200] [DEBUG] GET /video/test
+[2021-12-17 00:08:57 +0000] [3498200] [DEBUG] GET /favicon.ico
+[2021-12-17 00:09:12 +0000] [3498185] [INFO] Handling signal: term
+[2021-12-17 00:09:12 +0000] [3498199] [INFO] Worker exiting (pid: 3498199)
+[2021-12-17 00:09:12 +0000] [3498200] [INFO] Worker exiting (pid: 3498200)
+[2021-12-17 00:09:12 +0000] [3498201] [INFO] Worker exiting (pid: 3498201)
+[2021-12-17 00:09:12 +0000] [3498198] [INFO] Worker exiting (pid: 3498198)
+[2021-12-17 00:09:12 +0000] [3498185] [INFO] Shutting down: Master
+[2021-12-17 00:09:12 +0000] [3590230] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 10000
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fadd1bed550>
+  on_reload: <function OnReload.on_reload at 0x7fadd1bed670>
+  when_ready: <function WhenReady.when_ready at 0x7fadd1bed790>
+  pre_fork: <function Prefork.pre_fork at 0x7fadd1bed8b0>
+  post_fork: <function Postfork.post_fork at 0x7fadd1bed9d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fadd1bedaf0>
+  worker_int: <function WorkerInt.worker_int at 0x7fadd1bedc10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fadd1bedd30>
+  pre_exec: <function PreExec.pre_exec at 0x7fadd1bede50>
+  pre_request: <function PreRequest.pre_request at 0x7fadd1bedf70>
+  post_request: <function PostRequest.post_request at 0x7fadd1c01040>
+  child_exit: <function ChildExit.child_exit at 0x7fadd1c01160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fadd1c01280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fadd1c013a0>
+  on_exit: <function OnExit.on_exit at 0x7fadd1c014c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-12-17 00:09:12 +0000] [3590230] [INFO] Starting gunicorn 20.1.0
+[2021-12-17 00:09:12 +0000] [3590230] [DEBUG] Arbiter booted
+[2021-12-17 00:09:12 +0000] [3590230] [INFO] Listening at: unix:gdartes-videos.sock (3590230)
+[2021-12-17 00:09:12 +0000] [3590230] [INFO] Using worker: sync
+[2021-12-17 00:09:12 +0000] [3590243] [INFO] Booting worker with pid: 3590243
+[2021-12-17 00:09:12 +0000] [3590244] [INFO] Booting worker with pid: 3590244
+[2021-12-17 00:09:12 +0000] [3590245] [INFO] Booting worker with pid: 3590245
+[2021-12-17 00:09:12 +0000] [3590246] [INFO] Booting worker with pid: 3590246
+[2021-12-17 00:09:13 +0000] [3590230] [DEBUG] 4 workers
+[2021-12-17 00:09:16 +0000] [3590243] [DEBUG] GET /video/test
+[2021-12-17 00:23:07 +0000] [3590230] [INFO] Handling signal: term
+[2021-12-17 00:23:07 +0000] [3590243] [INFO] Worker exiting (pid: 3590243)
+[2021-12-17 00:23:07 +0000] [3590244] [INFO] Worker exiting (pid: 3590244)
+[2021-12-17 00:23:07 +0000] [3590246] [INFO] Worker exiting (pid: 3590246)
+[2021-12-17 00:23:07 +0000] [3590245] [INFO] Worker exiting (pid: 3590245)
+[2021-12-17 00:23:07 +0000] [3590230] [INFO] Shutting down: Master
+[2021-12-17 00:23:07 +0000] [3591055] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 10000
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fc8efaca550>
+  on_reload: <function OnReload.on_reload at 0x7fc8efaca670>
+  when_ready: <function WhenReady.when_ready at 0x7fc8efaca790>
+  pre_fork: <function Prefork.pre_fork at 0x7fc8efaca8b0>
+  post_fork: <function Postfork.post_fork at 0x7fc8efaca9d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fc8efacaaf0>
+  worker_int: <function WorkerInt.worker_int at 0x7fc8efacac10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fc8efacad30>
+  pre_exec: <function PreExec.pre_exec at 0x7fc8efacae50>
+  pre_request: <function PreRequest.pre_request at 0x7fc8efacaf70>
+  post_request: <function PostRequest.post_request at 0x7fc8efade040>
+  child_exit: <function ChildExit.child_exit at 0x7fc8efade160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fc8efade280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fc8efade3a0>
+  on_exit: <function OnExit.on_exit at 0x7fc8efade4c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-12-17 00:23:07 +0000] [3591055] [INFO] Starting gunicorn 20.1.0
+[2021-12-17 00:23:07 +0000] [3591055] [DEBUG] Arbiter booted
+[2021-12-17 00:23:07 +0000] [3591055] [INFO] Listening at: unix:gdartes-videos.sock (3591055)
+[2021-12-17 00:23:07 +0000] [3591055] [INFO] Using worker: sync
+[2021-12-17 00:23:07 +0000] [3591071] [INFO] Booting worker with pid: 3591071
+[2021-12-17 00:23:07 +0000] [3591072] [INFO] Booting worker with pid: 3591072
+[2021-12-17 00:23:07 +0000] [3591073] [INFO] Booting worker with pid: 3591073
+[2021-12-17 00:23:08 +0000] [3591074] [INFO] Booting worker with pid: 3591074
+[2021-12-17 00:23:08 +0000] [3591055] [DEBUG] 4 workers
+[2021-12-17 00:23:08 +0000] [3591071] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 63
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:23:08 +0000] [3591071] [INFO] Worker exiting (pid: 3591071)
+[2021-12-17 00:23:08 +0000] [3591072] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 63
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:23:08 +0000] [3591072] [INFO] Worker exiting (pid: 3591072)
+[2021-12-17 00:23:08 +0000] [3591073] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 63
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:23:08 +0000] [3591073] [INFO] Worker exiting (pid: 3591073)
+[2021-12-17 00:23:08 +0000] [3591055] [WARNING] Worker with pid 3591072 was terminated due to signal 15
+[2021-12-17 00:23:08 +0000] [3591074] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 63
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:23:08 +0000] [3591074] [INFO] Worker exiting (pid: 3591074)
+[2021-12-17 00:23:29 +0000] [3591098] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 10000
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f471b806550>
+  on_reload: <function OnReload.on_reload at 0x7f471b806670>
+  when_ready: <function WhenReady.when_ready at 0x7f471b806790>
+  pre_fork: <function Prefork.pre_fork at 0x7f471b8068b0>
+  post_fork: <function Postfork.post_fork at 0x7f471b8069d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f471b806af0>
+  worker_int: <function WorkerInt.worker_int at 0x7f471b806c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f471b806d30>
+  pre_exec: <function PreExec.pre_exec at 0x7f471b806e50>
+  pre_request: <function PreRequest.pre_request at 0x7f471b806f70>
+  post_request: <function PostRequest.post_request at 0x7f471b81a040>
+  child_exit: <function ChildExit.child_exit at 0x7f471b81a160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f471b81a280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f471b81a3a0>
+  on_exit: <function OnExit.on_exit at 0x7f471b81a4c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-12-17 00:23:29 +0000] [3591098] [INFO] Starting gunicorn 20.1.0
+[2021-12-17 00:23:29 +0000] [3591098] [DEBUG] Arbiter booted
+[2021-12-17 00:23:29 +0000] [3591098] [INFO] Listening at: unix:gdartes-videos.sock (3591098)
+[2021-12-17 00:23:29 +0000] [3591098] [INFO] Using worker: sync
+[2021-12-17 00:23:29 +0000] [3591111] [INFO] Booting worker with pid: 3591111
+[2021-12-17 00:23:29 +0000] [3591112] [INFO] Booting worker with pid: 3591112
+[2021-12-17 00:23:29 +0000] [3591113] [INFO] Booting worker with pid: 3591113
+[2021-12-17 00:23:29 +0000] [3591114] [INFO] Booting worker with pid: 3591114
+[2021-12-17 00:23:29 +0000] [3591098] [DEBUG] 4 workers
+[2021-12-17 00:23:29 +0000] [3591111] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 63
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:23:29 +0000] [3591111] [INFO] Worker exiting (pid: 3591111)
+[2021-12-17 00:23:29 +0000] [3591112] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 63
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:23:29 +0000] [3591112] [INFO] Worker exiting (pid: 3591112)
+[2021-12-17 00:23:29 +0000] [3591113] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 63
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:23:29 +0000] [3591113] [INFO] Worker exiting (pid: 3591113)
+[2021-12-17 00:23:29 +0000] [3591098] [WARNING] Worker with pid 3591112 was terminated due to signal 15
+[2021-12-17 00:23:29 +0000] [3591114] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 63
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:23:29 +0000] [3591114] [INFO] Worker exiting (pid: 3591114)
+[2021-12-17 00:25:14 +0000] [3591222] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 10000
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f30c594b550>
+  on_reload: <function OnReload.on_reload at 0x7f30c594b670>
+  when_ready: <function WhenReady.when_ready at 0x7f30c594b790>
+  pre_fork: <function Prefork.pre_fork at 0x7f30c594b8b0>
+  post_fork: <function Postfork.post_fork at 0x7f30c594b9d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f30c594baf0>
+  worker_int: <function WorkerInt.worker_int at 0x7f30c594bc10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f30c594bd30>
+  pre_exec: <function PreExec.pre_exec at 0x7f30c594be50>
+  pre_request: <function PreRequest.pre_request at 0x7f30c594bf70>
+  post_request: <function PostRequest.post_request at 0x7f30c595f040>
+  child_exit: <function ChildExit.child_exit at 0x7f30c595f160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f30c595f280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f30c595f3a0>
+  on_exit: <function OnExit.on_exit at 0x7f30c595f4c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-12-17 00:25:14 +0000] [3591222] [INFO] Starting gunicorn 20.1.0
+[2021-12-17 00:25:14 +0000] [3591222] [DEBUG] Arbiter booted
+[2021-12-17 00:25:14 +0000] [3591222] [INFO] Listening at: unix:gdartes-videos.sock (3591222)
+[2021-12-17 00:25:14 +0000] [3591222] [INFO] Using worker: sync
+[2021-12-17 00:25:14 +0000] [3591234] [INFO] Booting worker with pid: 3591234
+[2021-12-17 00:25:14 +0000] [3591235] [INFO] Booting worker with pid: 3591235
+[2021-12-17 00:25:14 +0000] [3591236] [INFO] Booting worker with pid: 3591236
+[2021-12-17 00:25:14 +0000] [3591237] [INFO] Booting worker with pid: 3591237
+[2021-12-17 00:25:14 +0000] [3591222] [DEBUG] 4 workers
+[2021-12-17 00:25:14 +0000] [3591234] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 62
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:25:14 +0000] [3591234] [INFO] Worker exiting (pid: 3591234)
+[2021-12-17 00:25:14 +0000] [3591235] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 62
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:25:14 +0000] [3591235] [INFO] Worker exiting (pid: 3591235)
+[2021-12-17 00:25:14 +0000] [3591236] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 62
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:25:14 +0000] [3591236] [INFO] Worker exiting (pid: 3591236)
+[2021-12-17 00:25:14 +0000] [3591237] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 62
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:25:14 +0000] [3591237] [INFO] Worker exiting (pid: 3591237)
+[2021-12-17 00:25:14 +0000] [3591222] [WARNING] Worker with pid 3591235 was terminated due to signal 15
+[2021-12-17 00:25:14 +0000] [3591222] [WARNING] Worker with pid 3591236 was terminated due to signal 15
+[2021-12-17 00:25:14 +0000] [3591222] [WARNING] Worker with pid 3591237 was terminated due to signal 15
+[2021-12-17 00:25:14 +0000] [3591222] [INFO] Shutting down: Master
+[2021-12-17 00:25:14 +0000] [3591222] [INFO] Reason: Worker failed to boot.
+[2021-12-17 00:25:25 +0000] [3591247] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 10000
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f10d8cb1550>
+  on_reload: <function OnReload.on_reload at 0x7f10d8cb1670>
+  when_ready: <function WhenReady.when_ready at 0x7f10d8cb1790>
+  pre_fork: <function Prefork.pre_fork at 0x7f10d8cb18b0>
+  post_fork: <function Postfork.post_fork at 0x7f10d8cb19d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f10d8cb1af0>
+  worker_int: <function WorkerInt.worker_int at 0x7f10d8cb1c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f10d8cb1d30>
+  pre_exec: <function PreExec.pre_exec at 0x7f10d8cb1e50>
+  pre_request: <function PreRequest.pre_request at 0x7f10d8cb1f70>
+  post_request: <function PostRequest.post_request at 0x7f10d8cc5040>
+  child_exit: <function ChildExit.child_exit at 0x7f10d8cc5160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f10d8cc5280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f10d8cc53a0>
+  on_exit: <function OnExit.on_exit at 0x7f10d8cc54c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-12-17 00:25:25 +0000] [3591247] [INFO] Starting gunicorn 20.1.0
+[2021-12-17 00:25:25 +0000] [3591247] [DEBUG] Arbiter booted
+[2021-12-17 00:25:25 +0000] [3591247] [INFO] Listening at: unix:gdartes-videos.sock (3591247)
+[2021-12-17 00:25:25 +0000] [3591247] [INFO] Using worker: sync
+[2021-12-17 00:25:25 +0000] [3591258] [INFO] Booting worker with pid: 3591258
+[2021-12-17 00:25:25 +0000] [3591259] [INFO] Booting worker with pid: 3591259
+[2021-12-17 00:25:25 +0000] [3591260] [INFO] Booting worker with pid: 3591260
+[2021-12-17 00:25:25 +0000] [3591261] [INFO] Booting worker with pid: 3591261
+[2021-12-17 00:25:25 +0000] [3591258] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 62
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:25:25 +0000] [3591258] [INFO] Worker exiting (pid: 3591258)
+[2021-12-17 00:25:25 +0000] [3591247] [DEBUG] 4 workers
+[2021-12-17 00:25:25 +0000] [3591259] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 62
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:25:25 +0000] [3591259] [INFO] Worker exiting (pid: 3591259)
+[2021-12-17 00:25:25 +0000] [3591247] [WARNING] Worker with pid 3591259 was terminated due to signal 15
+[2021-12-17 00:25:26 +0000] [3591260] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 62
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:25:26 +0000] [3591260] [INFO] Worker exiting (pid: 3591260)
+[2021-12-17 00:25:26 +0000] [3591261] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 62
+    return "filepath"
+                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:25:26 +0000] [3591261] [INFO] Worker exiting (pid: 3591261)
+[2021-12-17 00:27:59 +0000] [3591415] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 10000
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f2105820550>
+  on_reload: <function OnReload.on_reload at 0x7f2105820670>
+  when_ready: <function WhenReady.when_ready at 0x7f2105820790>
+  pre_fork: <function Prefork.pre_fork at 0x7f21058208b0>
+  post_fork: <function Postfork.post_fork at 0x7f21058209d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f2105820af0>
+  worker_int: <function WorkerInt.worker_int at 0x7f2105820c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f2105820d30>
+  pre_exec: <function PreExec.pre_exec at 0x7f2105820e50>
+  pre_request: <function PreRequest.pre_request at 0x7f2105820f70>
+  post_request: <function PostRequest.post_request at 0x7f2105834040>
+  child_exit: <function ChildExit.child_exit at 0x7f2105834160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f2105834280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f21058343a0>
+  on_exit: <function OnExit.on_exit at 0x7f21058344c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-12-17 00:27:59 +0000] [3591415] [INFO] Starting gunicorn 20.1.0
+[2021-12-17 00:27:59 +0000] [3591415] [DEBUG] Arbiter booted
+[2021-12-17 00:27:59 +0000] [3591415] [INFO] Listening at: unix:gdartes-videos.sock (3591415)
+[2021-12-17 00:27:59 +0000] [3591415] [INFO] Using worker: sync
+[2021-12-17 00:27:59 +0000] [3591426] [INFO] Booting worker with pid: 3591426
+[2021-12-17 00:27:59 +0000] [3591427] [INFO] Booting worker with pid: 3591427
+[2021-12-17 00:27:59 +0000] [3591428] [INFO] Booting worker with pid: 3591428
+[2021-12-17 00:28:00 +0000] [3591429] [INFO] Booting worker with pid: 3591429
+[2021-12-17 00:28:00 +0000] [3591415] [DEBUG] 4 workers
+[2021-12-17 00:28:00 +0000] [3591426] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 61
+    final_path =  publicdir + "testvideo66.mp4"
+                                              ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:28:00 +0000] [3591426] [INFO] Worker exiting (pid: 3591426)
+[2021-12-17 00:28:00 +0000] [3591427] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 61
+    final_path =  publicdir + "testvideo66.mp4"
+                                              ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:28:00 +0000] [3591427] [INFO] Worker exiting (pid: 3591427)
+[2021-12-17 00:28:00 +0000] [3591428] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 61
+    final_path =  publicdir + "testvideo66.mp4"
+                                              ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:28:00 +0000] [3591428] [INFO] Worker exiting (pid: 3591428)
+[2021-12-17 00:28:00 +0000] [3591415] [WARNING] Worker with pid 3591427 was terminated due to signal 15
+[2021-12-17 00:28:00 +0000] [3591429] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 61
+    final_path =  publicdir + "testvideo66.mp4"
+                                              ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:28:00 +0000] [3591429] [INFO] Worker exiting (pid: 3591429)
+[2021-12-17 00:28:08 +0000] [3591454] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 10000
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f697d152550>
+  on_reload: <function OnReload.on_reload at 0x7f697d152670>
+  when_ready: <function WhenReady.when_ready at 0x7f697d152790>
+  pre_fork: <function Prefork.pre_fork at 0x7f697d1528b0>
+  post_fork: <function Postfork.post_fork at 0x7f697d1529d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f697d152af0>
+  worker_int: <function WorkerInt.worker_int at 0x7f697d152c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f697d152d30>
+  pre_exec: <function PreExec.pre_exec at 0x7f697d152e50>
+  pre_request: <function PreRequest.pre_request at 0x7f697d152f70>
+  post_request: <function PostRequest.post_request at 0x7f697d166040>
+  child_exit: <function ChildExit.child_exit at 0x7f697d166160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f697d166280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f697d1663a0>
+  on_exit: <function OnExit.on_exit at 0x7f697d1664c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-12-17 00:28:08 +0000] [3591454] [INFO] Starting gunicorn 20.1.0
+[2021-12-17 00:28:08 +0000] [3591454] [DEBUG] Arbiter booted
+[2021-12-17 00:28:08 +0000] [3591454] [INFO] Listening at: unix:gdartes-videos.sock (3591454)
+[2021-12-17 00:28:08 +0000] [3591454] [INFO] Using worker: sync
+[2021-12-17 00:28:08 +0000] [3591466] [INFO] Booting worker with pid: 3591466
+[2021-12-17 00:28:08 +0000] [3591467] [INFO] Booting worker with pid: 3591467
+[2021-12-17 00:28:08 +0000] [3591468] [INFO] Booting worker with pid: 3591468
+[2021-12-17 00:28:08 +0000] [3591469] [INFO] Booting worker with pid: 3591469
+[2021-12-17 00:28:08 +0000] [3591466] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 61
+    final_path =  publicdir + "testvideo66.mp4"
+                                              ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:28:08 +0000] [3591466] [INFO] Worker exiting (pid: 3591466)
+[2021-12-17 00:28:08 +0000] [3591454] [DEBUG] 4 workers
+[2021-12-17 00:28:08 +0000] [3591467] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 61
+    final_path =  publicdir + "testvideo66.mp4"
+                                              ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:28:08 +0000] [3591467] [INFO] Worker exiting (pid: 3591467)
+[2021-12-17 00:28:08 +0000] [3591454] [WARNING] Worker with pid 3591467 was terminated due to signal 15
+[2021-12-17 00:28:08 +0000] [3591468] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 61
+    final_path =  publicdir + "testvideo66.mp4"
+                                              ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:28:08 +0000] [3591468] [INFO] Worker exiting (pid: 3591468)
+[2021-12-17 00:28:08 +0000] [3591469] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 61
+    final_path =  publicdir + "testvideo66.mp4"
+                                              ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:28:08 +0000] [3591469] [INFO] Worker exiting (pid: 3591469)
+[2021-12-17 00:40:12 +0000] [3592178] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 10000
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fc4189ae550>
+  on_reload: <function OnReload.on_reload at 0x7fc4189ae670>
+  when_ready: <function WhenReady.when_ready at 0x7fc4189ae790>
+  pre_fork: <function Prefork.pre_fork at 0x7fc4189ae8b0>
+  post_fork: <function Postfork.post_fork at 0x7fc4189ae9d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fc4189aeaf0>
+  worker_int: <function WorkerInt.worker_int at 0x7fc4189aec10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fc4189aed30>
+  pre_exec: <function PreExec.pre_exec at 0x7fc4189aee50>
+  pre_request: <function PreRequest.pre_request at 0x7fc4189aef70>
+  post_request: <function PostRequest.post_request at 0x7fc4189c2040>
+  child_exit: <function ChildExit.child_exit at 0x7fc4189c2160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fc4189c2280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fc4189c23a0>
+  on_exit: <function OnExit.on_exit at 0x7fc4189c24c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-12-17 00:40:12 +0000] [3592178] [INFO] Starting gunicorn 20.1.0
+[2021-12-17 00:40:12 +0000] [3592178] [DEBUG] Arbiter booted
+[2021-12-17 00:40:12 +0000] [3592178] [INFO] Listening at: unix:gdartes-videos.sock (3592178)
+[2021-12-17 00:40:12 +0000] [3592178] [INFO] Using worker: sync
+[2021-12-17 00:40:12 +0000] [3592190] [INFO] Booting worker with pid: 3592190
+[2021-12-17 00:40:12 +0000] [3592191] [INFO] Booting worker with pid: 3592191
+[2021-12-17 00:40:12 +0000] [3592192] [INFO] Booting worker with pid: 3592192
+[2021-12-17 00:40:12 +0000] [3592193] [INFO] Booting worker with pid: 3592193
+[2021-12-17 00:40:12 +0000] [3592178] [DEBUG] 4 workers
+[2021-12-17 00:40:53 +0000] [3592192] [DEBUG] GET /video/test
+[2021-12-17 00:46:35 +0000] [3592190] [INFO] Worker exiting (pid: 3592190)
+[2021-12-17 00:46:35 +0000] [3592193] [INFO] Worker exiting (pid: 3592193)
+[2021-12-17 00:46:35 +0000] [3592191] [INFO] Worker exiting (pid: 3592191)
+[2021-12-17 00:46:35 +0000] [3592192] [INFO] Worker exiting (pid: 3592192)
+[2021-12-17 00:46:36 +0000] [3592178] [INFO] Handling signal: term
+[2021-12-17 00:46:36 +0000] [3592178] [WARNING] Worker with pid 3592190 was terminated due to signal 15
+[2021-12-17 00:46:36 +0000] [3592178] [WARNING] Worker with pid 3592193 was terminated due to signal 15
+[2021-12-17 00:46:36 +0000] [3592178] [WARNING] Worker with pid 3592191 was terminated due to signal 15
+[2021-12-17 00:46:36 +0000] [3592178] [WARNING] Worker with pid 3592192 was terminated due to signal 15
+[2021-12-17 00:46:36 +0000] [3592178] [INFO] Shutting down: Master
+[2021-12-17 00:46:36 +0000] [3592585] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 10000
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f1a13676550>
+  on_reload: <function OnReload.on_reload at 0x7f1a13676670>
+  when_ready: <function WhenReady.when_ready at 0x7f1a13676790>
+  pre_fork: <function Prefork.pre_fork at 0x7f1a136768b0>
+  post_fork: <function Postfork.post_fork at 0x7f1a136769d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f1a13676af0>
+  worker_int: <function WorkerInt.worker_int at 0x7f1a13676c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f1a13676d30>
+  pre_exec: <function PreExec.pre_exec at 0x7f1a13676e50>
+  pre_request: <function PreRequest.pre_request at 0x7f1a13676f70>
+  post_request: <function PostRequest.post_request at 0x7f1a1368a040>
+  child_exit: <function ChildExit.child_exit at 0x7f1a1368a160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f1a1368a280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f1a1368a3a0>
+  on_exit: <function OnExit.on_exit at 0x7f1a1368a4c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-12-17 00:46:36 +0000] [3592585] [INFO] Starting gunicorn 20.1.0
+[2021-12-17 00:46:36 +0000] [3592585] [DEBUG] Arbiter booted
+[2021-12-17 00:46:36 +0000] [3592585] [INFO] Listening at: unix:gdartes-videos.sock (3592585)
+[2021-12-17 00:46:36 +0000] [3592585] [INFO] Using worker: sync
+[2021-12-17 00:46:36 +0000] [3592601] [INFO] Booting worker with pid: 3592601
+[2021-12-17 00:46:36 +0000] [3592602] [INFO] Booting worker with pid: 3592602
+[2021-12-17 00:46:36 +0000] [3592603] [INFO] Booting worker with pid: 3592603
+[2021-12-17 00:46:36 +0000] [3592604] [INFO] Booting worker with pid: 3592604
+[2021-12-17 00:46:36 +0000] [3592585] [DEBUG] 4 workers
+[2021-12-17 00:49:50 +0000] [3592585] [INFO] Handling signal: term
+[2021-12-17 00:49:50 +0000] [3592604] [INFO] Worker exiting (pid: 3592604)
+[2021-12-17 00:49:50 +0000] [3592601] [INFO] Worker exiting (pid: 3592601)
+[2021-12-17 00:49:50 +0000] [3592603] [INFO] Worker exiting (pid: 3592603)
+[2021-12-17 00:49:50 +0000] [3592602] [INFO] Worker exiting (pid: 3592602)
+[2021-12-17 00:49:50 +0000] [3592585] [INFO] Shutting down: Master
+[2021-12-17 00:49:50 +0000] [3592837] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 10000
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f183a82b550>
+  on_reload: <function OnReload.on_reload at 0x7f183a82b670>
+  when_ready: <function WhenReady.when_ready at 0x7f183a82b790>
+  pre_fork: <function Prefork.pre_fork at 0x7f183a82b8b0>
+  post_fork: <function Postfork.post_fork at 0x7f183a82b9d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f183a82baf0>
+  worker_int: <function WorkerInt.worker_int at 0x7f183a82bc10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f183a82bd30>
+  pre_exec: <function PreExec.pre_exec at 0x7f183a82be50>
+  pre_request: <function PreRequest.pre_request at 0x7f183a82bf70>
+  post_request: <function PostRequest.post_request at 0x7f183a83f040>
+  child_exit: <function ChildExit.child_exit at 0x7f183a83f160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f183a83f280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f183a83f3a0>
+  on_exit: <function OnExit.on_exit at 0x7f183a83f4c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-12-17 00:49:50 +0000] [3592837] [INFO] Starting gunicorn 20.1.0
+[2021-12-17 00:49:50 +0000] [3592837] [DEBUG] Arbiter booted
+[2021-12-17 00:49:50 +0000] [3592837] [INFO] Listening at: unix:gdartes-videos.sock (3592837)
+[2021-12-17 00:49:50 +0000] [3592837] [INFO] Using worker: sync
+[2021-12-17 00:49:50 +0000] [3592851] [INFO] Booting worker with pid: 3592851
+[2021-12-17 00:49:50 +0000] [3592853] [INFO] Booting worker with pid: 3592853
+[2021-12-17 00:49:50 +0000] [3592854] [INFO] Booting worker with pid: 3592854
+[2021-12-17 00:49:50 +0000] [3592855] [INFO] Booting worker with pid: 3592855
+[2021-12-17 00:49:50 +0000] [3592837] [DEBUG] 4 workers
+[2021-12-17 00:49:51 +0000] [3592851] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 34
+    video = (VideoFileClip(videoPath, audio=False,)
+                                                  ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:49:51 +0000] [3592851] [INFO] Worker exiting (pid: 3592851)
+[2021-12-17 00:49:51 +0000] [3592855] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 34
+    video = (VideoFileClip(videoPath, audio=False,)
+                                                  ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:49:51 +0000] [3592855] [INFO] Worker exiting (pid: 3592855)
+[2021-12-17 00:49:51 +0000] [3592853] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 34
+    video = (VideoFileClip(videoPath, audio=False,)
+                                                  ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:49:51 +0000] [3592853] [INFO] Worker exiting (pid: 3592853)
+[2021-12-17 00:49:51 +0000] [3592854] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/var/www/gdartes-videos/virtual/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/gdartes-videos/wsgi.py", line 1, in <module>
+    from app import app
+  File "/var/www/gdartes-videos/app.py", line 4, in <module>
+    from api.route.video import video_api
+  File "/var/www/gdartes-videos/api/route/video.py", line 8, in <module>
+    from controllers.moviepy_controller import MoviepyController
+  File "/var/www/gdartes-videos/controllers/moviepy_controller.py", line 34
+    video = (VideoFileClip(videoPath, audio=False,)
+                                                  ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2021-12-17 00:49:51 +0000] [3592854] [INFO] Worker exiting (pid: 3592854)
+[2021-12-17 00:49:51 +0000] [3592837] [WARNING] Worker with pid 3592853 was terminated due to signal 15
+[2021-12-17 00:49:51 +0000] [3592837] [WARNING] Worker with pid 3592854 was terminated due to signal 15
+[2021-12-17 00:49:51 +0000] [3592837] [WARNING] Worker with pid 3592855 was terminated due to signal 15
+[2021-12-17 00:49:51 +0000] [3592837] [INFO] Shutting down: Master
+[2021-12-17 00:49:51 +0000] [3592837] [INFO] Reason: Worker failed to boot.
+[2021-12-17 00:51:23 +0000] [3592941] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 10000
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fc076c23550>
+  on_reload: <function OnReload.on_reload at 0x7fc076c23670>
+  when_ready: <function WhenReady.when_ready at 0x7fc076c23790>
+  pre_fork: <function Prefork.pre_fork at 0x7fc076c238b0>
+  post_fork: <function Postfork.post_fork at 0x7fc076c239d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fc076c23af0>
+  worker_int: <function WorkerInt.worker_int at 0x7fc076c23c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fc076c23d30>
+  pre_exec: <function PreExec.pre_exec at 0x7fc076c23e50>
+  pre_request: <function PreRequest.pre_request at 0x7fc076c23f70>
+  post_request: <function PostRequest.post_request at 0x7fc076c37040>
+  child_exit: <function ChildExit.child_exit at 0x7fc076c37160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fc076c37280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fc076c373a0>
+  on_exit: <function OnExit.on_exit at 0x7fc076c374c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-12-17 00:51:23 +0000] [3592941] [INFO] Starting gunicorn 20.1.0
+[2021-12-17 00:51:23 +0000] [3592941] [DEBUG] Arbiter booted
+[2021-12-17 00:51:23 +0000] [3592941] [INFO] Listening at: unix:gdartes-videos.sock (3592941)
+[2021-12-17 00:51:23 +0000] [3592941] [INFO] Using worker: sync
+[2021-12-17 00:51:23 +0000] [3592952] [INFO] Booting worker with pid: 3592952
+[2021-12-17 00:51:23 +0000] [3592953] [INFO] Booting worker with pid: 3592953
+[2021-12-17 00:51:23 +0000] [3592954] [INFO] Booting worker with pid: 3592954
+[2021-12-17 00:51:23 +0000] [3592955] [INFO] Booting worker with pid: 3592955
+[2021-12-17 00:51:24 +0000] [3592941] [DEBUG] 4 workers
+[2021-12-17 00:53:54 +0000] [3592953] [INFO] Worker exiting (pid: 3592953)
+[2021-12-17 00:53:54 +0000] [3592952] [INFO] Worker exiting (pid: 3592952)
+[2021-12-17 00:53:54 +0000] [3592955] [INFO] Worker exiting (pid: 3592955)
+[2021-12-17 00:53:54 +0000] [3592941] [INFO] Handling signal: term
+[2021-12-17 00:53:54 +0000] [3592941] [WARNING] Worker with pid 3592952 was terminated due to signal 15
+[2021-12-17 00:53:54 +0000] [3592941] [WARNING] Worker with pid 3592955 was terminated due to signal 15
+[2021-12-17 00:53:54 +0000] [3592954] [INFO] Worker exiting (pid: 3592954)
+[2021-12-17 00:53:54 +0000] [3592941] [WARNING] Worker with pid 3592953 was terminated due to signal 15
+[2021-12-17 00:53:54 +0000] [3592941] [INFO] Shutting down: Master
+[2021-12-17 00:53:54 +0000] [3593165] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 10000
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7ff163945550>
+  on_reload: <function OnReload.on_reload at 0x7ff163945670>
+  when_ready: <function WhenReady.when_ready at 0x7ff163945790>
+  pre_fork: <function Prefork.pre_fork at 0x7ff1639458b0>
+  post_fork: <function Postfork.post_fork at 0x7ff1639459d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7ff163945af0>
+  worker_int: <function WorkerInt.worker_int at 0x7ff163945c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7ff163945d30>
+  pre_exec: <function PreExec.pre_exec at 0x7ff163945e50>
+  pre_request: <function PreRequest.pre_request at 0x7ff163945f70>
+  post_request: <function PostRequest.post_request at 0x7ff163959040>
+  child_exit: <function ChildExit.child_exit at 0x7ff163959160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7ff163959280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7ff1639593a0>
+  on_exit: <function OnExit.on_exit at 0x7ff1639594c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-12-17 00:53:54 +0000] [3593165] [INFO] Starting gunicorn 20.1.0
+[2021-12-17 00:53:54 +0000] [3593165] [DEBUG] Arbiter booted
+[2021-12-17 00:53:54 +0000] [3593165] [INFO] Listening at: unix:gdartes-videos.sock (3593165)
+[2021-12-17 00:53:54 +0000] [3593165] [INFO] Using worker: sync
+[2021-12-17 00:53:54 +0000] [3593181] [INFO] Booting worker with pid: 3593181
+[2021-12-17 00:53:54 +0000] [3593182] [INFO] Booting worker with pid: 3593182
+[2021-12-17 00:53:54 +0000] [3593183] [INFO] Booting worker with pid: 3593183
+[2021-12-17 00:53:54 +0000] [3593184] [INFO] Booting worker with pid: 3593184
+[2021-12-17 00:53:54 +0000] [3593165] [DEBUG] 4 workers
+[2021-12-17 00:54:10 +0000] [3593184] [DEBUG] GET /video/test
+[2021-12-17 22:03:02 +0000] [3593182] [DEBUG] GET /video/test
+[2021-12-17 22:03:03 +0000] [3593182] [DEBUG] GET /favicon.ico
+[2021-12-17 23:41:24 +0000] [3593182] [INFO] Worker exiting (pid: 3593182)
+[2021-12-17 23:41:24 +0000] [3593184] [INFO] Worker exiting (pid: 3593184)
+[2021-12-17 23:41:24 +0000] [3593181] [INFO] Worker exiting (pid: 3593181)
+[2021-12-17 23:41:24 +0000] [3593183] [INFO] Worker exiting (pid: 3593183)
+[2021-12-17 23:41:24 +0000] [3593165] [INFO] Handling signal: term
+[2021-12-17 23:41:24 +0000] [3593165] [INFO] Shutting down: Master
+[2021-12-17 23:41:24 +0000] [3673836] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 300
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7efdcef26550>
+  on_reload: <function OnReload.on_reload at 0x7efdcef26670>
+  when_ready: <function WhenReady.when_ready at 0x7efdcef26790>
+  pre_fork: <function Prefork.pre_fork at 0x7efdcef268b0>
+  post_fork: <function Postfork.post_fork at 0x7efdcef269d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7efdcef26af0>
+  worker_int: <function WorkerInt.worker_int at 0x7efdcef26c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7efdcef26d30>
+  pre_exec: <function PreExec.pre_exec at 0x7efdcef26e50>
+  pre_request: <function PreRequest.pre_request at 0x7efdcef26f70>
+  post_request: <function PostRequest.post_request at 0x7efdcef3a040>
+  child_exit: <function ChildExit.child_exit at 0x7efdcef3a160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7efdcef3a280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7efdcef3a3a0>
+  on_exit: <function OnExit.on_exit at 0x7efdcef3a4c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-12-17 23:41:24 +0000] [3673836] [INFO] Starting gunicorn 20.1.0
+[2021-12-17 23:41:24 +0000] [3673836] [DEBUG] Arbiter booted
+[2021-12-17 23:41:24 +0000] [3673836] [INFO] Listening at: unix:gdartes-videos.sock (3673836)
+[2021-12-17 23:41:24 +0000] [3673836] [INFO] Using worker: sync
+[2021-12-17 23:41:24 +0000] [3673855] [INFO] Booting worker with pid: 3673855
+[2021-12-17 23:41:24 +0000] [3673856] [INFO] Booting worker with pid: 3673856
+[2021-12-17 23:41:24 +0000] [3673857] [INFO] Booting worker with pid: 3673857
+[2021-12-17 23:41:24 +0000] [3673858] [INFO] Booting worker with pid: 3673858
+[2021-12-17 23:41:25 +0000] [3673836] [DEBUG] 4 workers
+[2021-12-17 23:44:34 +0000] [3673858] [DEBUG] GET /video/test
+[2021-12-17 23:44:37 +0000] [3673857] [DEBUG] GET /video/test
+[2021-12-17 23:44:38 +0000] [3673858] [DEBUG] GET /video/test
+[2021-12-20 20:16:31 +0000] [3673857] [DEBUG] GET /video/test
+[2021-12-20 20:16:31 +0000] [3673857] [DEBUG] GET /favicon.ico
+[2022-01-06 20:03:41 +0000] [3673857] [INFO] Worker exiting (pid: 3673857)
+[2022-01-06 20:03:41 +0000] [3673856] [INFO] Worker exiting (pid: 3673856)
+[2022-01-06 20:03:41 +0000] [3673858] [INFO] Worker exiting (pid: 3673858)
+[2022-01-06 20:03:41 +0000] [3673836] [INFO] Handling signal: term
+[2022-01-06 20:03:41 +0000] [3673855] [INFO] Worker exiting (pid: 3673855)
+[2022-01-06 20:03:41 +0000] [3673836] [INFO] Shutting down: Master
+[2022-01-06 20:04:04 +0000] [749] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:gdartes-videos.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 300
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /var/www/gdartes-videos
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 33
+  umask: 7
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /var/www/gdartes-videos/gunicorn.log
+  loglevel: DEBUG
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: wsgi:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f267bce9550>
+  on_reload: <function OnReload.on_reload at 0x7f267bce9670>
+  when_ready: <function WhenReady.when_ready at 0x7f267bce9790>
+  pre_fork: <function Prefork.pre_fork at 0x7f267bce98b0>
+  post_fork: <function Postfork.post_fork at 0x7f267bce99d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f267bce9af0>
+  worker_int: <function WorkerInt.worker_int at 0x7f267bce9c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f267bce9d30>
+  pre_exec: <function PreExec.pre_exec at 0x7f267bce9e50>
+  pre_request: <function PreRequest.pre_request at 0x7f267bce9f70>
+  post_request: <function PostRequest.post_request at 0x7f267bcfd040>
+  child_exit: <function ChildExit.child_exit at 0x7f267bcfd160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f267bcfd280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f267bcfd3a0>
+  on_exit: <function OnExit.on_exit at 0x7f267bcfd4c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-06 20:04:04 +0000] [749] [INFO] Starting gunicorn 20.1.0
+[2022-01-06 20:04:04 +0000] [749] [DEBUG] Arbiter booted
+[2022-01-06 20:04:04 +0000] [749] [INFO] Listening at: unix:gdartes-videos.sock (749)
+[2022-01-06 20:04:04 +0000] [749] [INFO] Using worker: sync
+[2022-01-06 20:04:04 +0000] [851] [INFO] Booting worker with pid: 851
+[2022-01-06 20:04:04 +0000] [854] [INFO] Booting worker with pid: 854
+[2022-01-06 20:04:04 +0000] [861] [INFO] Booting worker with pid: 861
+[2022-01-06 20:04:04 +0000] [866] [INFO] Booting worker with pid: 866
+[2022-01-06 20:04:05 +0000] [749] [DEBUG] 4 workers
