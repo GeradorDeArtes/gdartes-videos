@@ -1,2 +1,5 @@
 virtual/
 public/
+*.pyc
+*.pyo
+__pycache__/
