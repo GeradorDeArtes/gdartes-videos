@@ -1,0 +1,9 @@
+flask 
+flasgger
+flask-marshmallow 
+apispec 
+python-dotenv 
+moviepy 
+werkzeug 
+flask-cors 
+gunicorn 

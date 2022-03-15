@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from flask import Blueprint, Flask, flash, request, redirect, url_for, send_file, send_from_directory
+from flask import Blueprint, Flask, flash, request, redirect, url_for, send_file, send_from_directory, jsonify
 from flask.helpers import make_response
 from flasgger import swag_from
 from api.model.video import VideoModel
@@ -10,6 +10,24 @@ import os
 
 video_api = Blueprint('video', __name__)
 
+@video_api.route('/saveFiles', methods=['POST'])
+def saveFiles():
+    video_file =  request.files['video']
+    video_file.save(os.path.join(publicdir, video_file.filename))
+
+    image_file = request.files['image']
+    image_file.save(os.path.join(publicdir, image_file.filename))
+
+    paths = {
+        'image_name' : image_file.filename,
+        'video_name' : video_file.filename
+    }
+    return jsonify(paths)
+
+@video_api.route('/getVideoFile', methods=['POST'])
+def getVideoFile():
+    videoName = request.form['videoName']
+    return send_from_directory(publicdir, path=videoName, as_attachment=True)
 
 @video_api.route('/overlayImage', methods=['POST'])
 @swag_from({
