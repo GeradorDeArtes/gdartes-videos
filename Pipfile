@@ -4,14 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flask = "*"
+Flask = "*"
 flasgger = "*"
 flask-marshmallow = "*"
 apispec = "*"
 python-dotenv = "*"
 moviepy = "*"
-werkzeug = "*"
-flask-cors = "*"
+Werkzeug = "*"
+Flask-Cors = "*"
 gunicorn = "*"
 wheel = "*"
 
