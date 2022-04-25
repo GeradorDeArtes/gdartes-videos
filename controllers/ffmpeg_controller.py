@@ -2,6 +2,7 @@ import subprocess
 from config import publicdir
 from datetime import datetime 
 import os
+import shlex
 
 class FFMPEGController:
     def __init__(self):
@@ -15,19 +16,29 @@ class FFMPEGController:
         containerOutputPath = os.path.abspath(os.path.dirname(__file__)) + "/" + datetime.now().strftime("%H:%M:%S") + "container.mp4"
         
         #scale=w:h sudo -S chmod 777 videoPath
-        createContainerCmd = "ffmpeg -i " + containerPath + " -vf scale=" + str(templateWidth) + ":" + str(templateHeight) + " "  + containerOutputPath
-        createContainerProcess = os.system(createContainerCmd)
-        
+        #createContainerCmd = "ffmpeg -i " + containerPath + " -vf scale=" + str(templateWidth) + ":" + str(templateHeight) + " "  + containerOutputPath
+        createContainerProcess = subprocess.Popen([
+            "ffmpeg", "-i", containerPath, "-vf", 
+            "scale=" + str(templateWidth) + ":" + str(templateHeight),
+            containerOutputPath])
+        createContainerProcess.wait()
+
         #position video inside container using template's position - overlay=x:y
         videoInsideContainerPath = os.path.abspath(os.path.dirname(__file__)) + "/" + datetime.now().strftime("%H:%M:%S") + "videoinsidecontainer.mp4"
         positionVideoCmd = "ffmpeg -i " + containerOutputPath + " -i " + videoPath + " -filter_complex '[0:v][1:v] overlay=" + str(positionX) + ":" + str(positionY) + "' " + videoInsideContainerPath
-        positionVideoProcess = os.system(positionVideoCmd)
-        
+        positionVideoProcess = subprocess.Popen(
+            shlex.split(positionVideoCmd)
+        )
+        positionVideoProcess.wait()
+
         #position image inside video at 0,0 
         finalVideoFileName =  datetime.now().strftime("%H:%M:%S") + "final.mp4"
         finalVideoPath = publicdir + finalVideoFileName
         positionImageInsideVideoCmd = "ffmpeg -i " + videoInsideContainerPath + " -i " + imagePath + " -filter_complex '[0:v][1:v] overlay=0:0' -c:a copy " + finalVideoPath
-        positionImageInsideVideoProcess = os.system(positionImageInsideVideoCmd)
+        positionImageInsideVideoProcess = subprocess.Popen(
+            shlex.split(positionImageInsideVideoCmd)
+        )
+        positionImageInsideVideoProcess.wait()
 
         #delete unused videos
         return finalVideoFileName
