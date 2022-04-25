@@ -29,6 +29,7 @@ class FFMPEGController:
         positionImageInsideVideoCmd = "ffmpeg -i " + videoInsideContainerPath + " -i " + imagePath + " -filter_complex '[0:v][1:v] overlay=0:0' -c:a copy " + finalVideoPath
         positionImageInsideVideoProcess = os.system(positionImageInsideVideoCmd)
 
+        #delete unused videos
         return finalVideoFileName
         
         #ffmpeg -i container.png -vf scale=2350:2350 -t containeroutput.mp4
