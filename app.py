@@ -5,7 +5,7 @@ from api.route.home import home_api
 from api.route.video import video_api
 from flask_cors import CORS, cross_origin
 from flask_socketio import SocketIO, send, emit
-from controllers.moviepy_controller import MoviepyController
+from controllers.ffmpeg_controller import FFMPEGController
 from config import publicdir
 
 import os
@@ -31,27 +31,31 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 
 @socketio.on('video')
 def handle_video(json):
-    moviepy = MoviepyController()    
+    ffmpeg = FFMPEGController()    
 
     positionX = float(json['positionX']) 
     positionY = float(json['positionY']) 
     componentHeight = float(json['height'])
     componentWidth = float(json['width'])
-    
+    templateWidth = float(json['templateWidth'])
+    templateHeight = float(json['templateHeight'])
+
     #position image return url with created video
-    print("creating video")
-    final_video_filename = moviepy.positionVideoInsideImage(
+    final_video_filename = ffmpeg.positionVideoInsideImage(
         publicdir + json['video'], 
         publicdir + json['image'], 
         positionX, 
         positionY,
         componentHeight,
-        componentWidth
+        componentWidth,
+        templateWidth,
+        templateHeight
     )
 
     final_video = {
         'final_video_name': final_video_filename
     }
+    
     final_video_json = pyjson.dumps(final_video)
     emit('video', final_video_json)
 

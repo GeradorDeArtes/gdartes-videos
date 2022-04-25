@@ -1,9 +1,9 @@
+from click import progressbar
 from moviepy.editor import *
 from config import publicdir
 import os
 import sys
 from datetime import datetime 
-from flask import send_file, send_from_directory, safe_join, abort
 from moviepy.video.fx.all import crop
 
 class MoviepyController:
@@ -29,14 +29,15 @@ class MoviepyController:
         file_name =  datetime.now().strftime("%H:%M:%S") + ".mp4"
         final_path = publicdir + file_name
         final.write_videofile(final_path) 
+        
         return file_name
         #return send_from_directory(publicdir, path=file_name, as_attachment=True)
 
     def positionVideoInsideImage(self, videoPath, imagePath, positionX, positionY, componentHeight, componentWidth):
         video = (VideoFileClip(videoPath).set_position((positionX, positionY)))
-        audio = video.audio
-        audio = CompositeAudioClip([audio])
-
+        #audio = video.audio
+        #audio = CompositeAudioClip([audio])
+        #ffmpeg_tools.ffmpeg_merge_video_audio
         #width = crop(originalClip, width=h, height=h, x_center=w/2, y_center=h/2) - WIDTH = 
         #set position can always CENTER a video
         (w, h) = video.size
@@ -63,12 +64,15 @@ class MoviepyController:
         
         #create video with image
         #position actual video inside image_video
-        final = CompositeVideoClip([ video, image ], size=size)
-        final.audio = audio
+        #final = CompositeVideoClip([ video, image ], size=size)
+        #final = clips_array([ video, image])
+        final = concatenate_videoclips([ video, image ], method="compose")
+        #inal.audio = audio
 
         file_name =  datetime.now().strftime("%H:%M:%S") + ".mp4"
         final_path = publicdir + file_name
-        final.write_videofile(final_path, audio=False) 
+        final.write_videofile(final_path, audio=False, preset="ultrafast", threads=4,     remove_temp=True,
+    codec="libx264",) 
 
         return file_name	
 

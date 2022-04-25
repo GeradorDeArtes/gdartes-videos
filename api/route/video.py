@@ -5,7 +5,9 @@ from flasgger import swag_from
 from api.model.video import VideoModel
 from api.schema.video import VideoSchema
 from config import publicdir
-from controllers.moviepy_controller import MoviepyController
+from controllers.ffmpeg_controller import FFMPEGController
+from datetime import datetime 
+
 import os
 
 video_api = Blueprint('video', __name__)
@@ -13,15 +15,20 @@ video_api = Blueprint('video', __name__)
 @video_api.route('/saveFiles', methods=['POST'])
 def saveFiles():
     video_file =  request.files['video']
-    video_file.save(os.path.join(publicdir, video_file.filename))
+    video_file_ext = video_file.filename.split('.')[-1]
+    video_file_name = datetime.now().strftime("%H:%M:%S") + "videofile." + video_file_ext
+    video_file.save(os.path.join(publicdir, video_file_name))
 
     image_file = request.files['image']
-    image_file.save(os.path.join(publicdir, image_file.filename))
+    image_file_ext = image_file.filename.split('.')[-1]
+    image_file_name =  datetime.now().strftime("%H:%M:%S") + "imgfile." + image_file_ext
+    image_file.save(os.path.join(publicdir, image_file_name))
 
     paths = {
-        'image_name' : image_file.filename,
-        'video_name' : video_file.filename
+        'image_name' : image_file_name,
+        'video_name' : video_file_name
     }
+    
     return jsonify(paths)
 
 @video_api.route('/getVideoFile', methods=['POST'])
@@ -30,20 +37,12 @@ def getVideoFile():
     return send_from_directory(publicdir, path=videoName, as_attachment=True)
 
 @video_api.route('/overlayImage', methods=['POST'])
-@swag_from({
-    'responses': {
-        HTTPStatus.OK.value: {
-            'description': 'Position image over video',
-            'schema': VideoSchema
-        }
-    }
-})
 def overlayImage():
     """
     1 liner about the route
     A more detailed description of the endpoint
     """
-    moviepy = MoviepyController()    
+    ffmpeg = FFMPEGController()    
 
     image_file = request.files['image']
     video_file = request.files['video']
@@ -54,24 +53,13 @@ def overlayImage():
     video_file.save(os.path.join(publicdir, video_file.filename))
 
     #position image return url with created video
-    final_video_filename = moviepy.overlayImage(publicdir + video_file.filename, publicdir + image_file.filename, positionX, positionY)
+    final_video_filename = ffmpeg.overlayImage(publicdir + video_file.filename, publicdir + image_file.filename, positionX, positionY)
     return send_from_directory(publicdir, path=final_video_filename, as_attachment=True)
-    #print(final_video_url)
-    #result = VideoModel(final_video_url)
 
-    #return VideoSchema().dump(result), 200
 
 @video_api.route('/createTemplateVideo', methods=['POST'])
-@swag_from({
-    'responses': {
-        HTTPStatus.OK.value: {
-            'description': 'Create video using template image',
-            'schema': VideoSchema
-        }
-    }
-})
 def createTemplateVideo():
-    moviepy = MoviepyController()    
+    ffmpeg = FFMPEGController()    
 
     image_file = request.files['image']
     video_file = request.files['video']
@@ -85,7 +73,7 @@ def createTemplateVideo():
     video_file.save(os.path.join(publicdir, video_file.filename))
 
     #position image return url with created video
-    final_video_filename = moviepy.positionVideoInsideImage(
+    final_video_filename = ffmpeg.positionVideoInsideImage(
         publicdir + video_file.filename, publicdir + 
         image_file.filename, 
         positionX, 
@@ -98,14 +86,6 @@ def createTemplateVideo():
 
     
 @video_api.route('/test', methods=["GET"])
-@swag_from({
-    'responses': {
-        HTTPStatus.OK.value: {
-            'description': 'API endpoint test',
-            'schema': VideoSchema
-        }
-    }
-})
 def test():
     """
     API routing test
@@ -113,12 +93,4 @@ def test():
 
     result = VideoModel("path_to_video")
     return VideoSchema().dump(result), 200
-
-
-"""
-url arg example 
-@app.route('/uploads/<filename>')
-def upload(filename):
-    return send_from_directory(app.config['UPLOAD_PATH'], filename) 
-"""
 
