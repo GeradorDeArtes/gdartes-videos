@@ -19,7 +19,7 @@ class FFMPEGController:
         #scale=w:h sudo -S chmod 777 videoPath
         createContainerCmd = ffmpegPath + " -i" + containerPath + " -vf scale=" + str(templateWidth) + ":" + str(templateHeight) + " "  + containerOutputPath
         createContainerProcess = subprocess.Popen(
-            shlex.split(createContainerCmd)
+            shlex.split(createContainerCmd), stdout=subprocess.PIPE
         )
         createContainerProcess.wait()
         for line in iter(createContainerProcess.stdout.readline, b""):
@@ -40,12 +40,12 @@ class FFMPEGController:
         finalVideoPath = publicdir + finalVideoFileName
         positionImageInsideVideoCmd = ffmpegPath + " -i " + videoInsideContainerPath + " -i " + imagePath + " -filter_complex '[0:v][1:v] overlay=0:0' -c:a copy " + finalVideoPath
         positionImageInsideVideoProcess = subprocess.Popen(
-            shlex.split(positionImageInsideVideoCmd)
+            shlex.split(positionImageInsideVideoCmd), stdout=subprocess.PIPE
         )
         positionImageInsideVideoProcess.wait()
         for line in iter(positionImageInsideVideoProcess.stdout.readline, b""):
             print(line)
-            
+
         #delete unused videos
         return finalVideoFileName
         
