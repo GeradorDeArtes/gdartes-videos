@@ -22,14 +22,18 @@ class FFMPEGController:
             shlex.split(createContainerCmd)
         )
         createContainerProcess.wait()
+        for line in iter(createContainerProcess.stdout.readline, b""):
+            print(line)
 
         #position video inside container using template's position - overlay=x:y
         videoInsideContainerPath = os.path.abspath(os.path.dirname(__file__)) + "/" + datetime.now().strftime("%H:%M:%S") + "videoinsidecontainer.mp4"
         positionVideoCmd = ffmpegPath + " -i " + containerOutputPath + " -i " + videoPath + " -filter_complex '[0:v][1:v] overlay=" + str(positionX) + ":" + str(positionY) + "' " + videoInsideContainerPath
         positionVideoProcess = subprocess.Popen(
-            shlex.split(positionVideoCmd)
+            shlex.split(positionVideoCmd), stdout=subprocess.PIPE
         )
         positionVideoProcess.wait()
+        for line in iter(positionVideoProcess.stdout.readline, b""):
+            print(line)
 
         #position image inside video at 0,0 
         finalVideoFileName =  datetime.now().strftime("%H:%M:%S") + "final.mp4"
@@ -39,7 +43,9 @@ class FFMPEGController:
             shlex.split(positionImageInsideVideoCmd)
         )
         positionImageInsideVideoProcess.wait()
-
+        for line in iter(positionImageInsideVideoProcess.stdout.readline, b""):
+            print(line)
+            
         #delete unused videos
         return finalVideoFileName
         
