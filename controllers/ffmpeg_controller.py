@@ -12,39 +12,37 @@ class FFMPEGController:
 
     def positionVideoInsideImage(self, videoPath, imagePath, positionX, positionY, componentHeight, componentWidth, templateWidth, templateHeight):
         #create container with templates dimensions 
-        ffmpegPath = "/usr/bin/ffmpeg"
+        #ffmpegPath = "/usr/bin/ffmpeg"
+        ffmpegPath = "ffmpeg"
+
         containerPath = os.path.abspath(os.path.dirname(__file__)) + "/container.png" 
         containerOutputPath = os.path.abspath(os.path.dirname(__file__)) + "/" + datetime.now().strftime("%H:%M:%S") + "container.mp4"
         
         #scale=w:h sudo -S chmod 777 videoPath
-        createContainerCmd = ffmpegPath + " -i" + containerPath + " -vf scale=" + str(templateWidth) + ":" + str(templateHeight) + " "  + containerOutputPath
+        createContainerCmd = ffmpegPath + " -i " + containerPath + " -vf scale=" + str(templateWidth) + ":" + str(templateHeight) + " "  + containerOutputPath
         createContainerProcess = subprocess.Popen(
-            shlex.split(createContainerCmd), stdout=subprocess.PIPE
+            shlex.split(createContainerCmd)
         )
         createContainerProcess.wait()
-        for line in iter(createContainerProcess.stdout.readline, b""):
-            print(line)
 
         #position video inside container using template's position - overlay=x:y
         videoInsideContainerPath = os.path.abspath(os.path.dirname(__file__)) + "/" + datetime.now().strftime("%H:%M:%S") + "videoinsidecontainer.mp4"
         positionVideoCmd = ffmpegPath + " -i " + containerOutputPath + " -i " + videoPath + " -filter_complex '[0:v][1:v] overlay=" + str(positionX) + ":" + str(positionY) + "' " + videoInsideContainerPath
         positionVideoProcess = subprocess.Popen(
-            shlex.split(positionVideoCmd), stdout=subprocess.PIPE
+            shlex.split(positionVideoCmd)
         )
         positionVideoProcess.wait()
-        for line in iter(positionVideoProcess.stdout.readline, b""):
-            print(line)
 
         #position image inside video at 0,0 
         finalVideoFileName =  datetime.now().strftime("%H:%M:%S") + "final.mp4"
         finalVideoPath = publicdir + finalVideoFileName
         positionImageInsideVideoCmd = ffmpegPath + " -i " + videoInsideContainerPath + " -i " + imagePath + " -filter_complex '[0:v][1:v] overlay=0:0' -c:a copy " + finalVideoPath
         positionImageInsideVideoProcess = subprocess.Popen(
-            shlex.split(positionImageInsideVideoCmd), stdout=subprocess.PIPE
+            shlex.split(positionImageInsideVideoCmd)
         )
         positionImageInsideVideoProcess.wait()
-        for line in iter(positionImageInsideVideoProcess.stdout.readline, b""):
-            print(line)
+        #for line in iter(positionImageInsideVideoProcess.stdout.readline, b""):
+        #    print(line)
 
         #delete unused videos
         return finalVideoFileName
