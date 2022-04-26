@@ -12,8 +12,8 @@ class FFMPEGController:
 
     def positionVideoInsideImage(self, videoPath, imagePath, positionX, positionY, componentHeight, componentWidth, templateWidth, templateHeight):
         #create container with templates dimensions 
-        #ffmpegPath = "/usr/bin/ffmpeg"
-        ffmpegPath = "ffmpeg"
+        ffmpegPath = "/usr/bin/ffmpeg"
+        #ffmpegPath = "/snap/bin/ffmpeg"
 
         containerPath = os.path.abspath(os.path.dirname(__file__)) + "/container.png" 
         containerOutputPath = os.path.abspath(os.path.dirname(__file__)) + "/" + datetime.now().strftime("%H:%M:%S") + "container.mp4"

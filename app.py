@@ -1,14 +1,11 @@
 from flask import  Flask, redirect, url_for, send_file, send_from_directory, request, jsonify
 
 from flasgger import Swagger
-from api.route.home import home_api
 from api.route.video import video_api
 from flask_cors import CORS, cross_origin
-from flask_socketio import SocketIO, send, emit
+from flask_socketio import SocketIO, emit
 from controllers.ffmpeg_controller import FFMPEGController
 from config import publicdir
-
-import os
 import json as pyjson
 
 def create_app():
